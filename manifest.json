@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Image Downloader X",
+    "version": "1.0",
+    "description": "X(旧Twitter)でいいねしたポストの画像を自動でダウンロードします",
+    "permissions": [
+      "storage",
+      "downloads"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://x.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }

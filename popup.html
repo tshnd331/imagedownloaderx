@@ -1,0 +1,53 @@
+<!--
+    Copyright 2024 tshnd331
+    This software is released under the MIT License, see LICENSE.
+-->
+
+<!DOCTYPE html>
+<html lang="ja" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="popup.css">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="popup.js" type="module"></script>
+</head>
+<body>
+    <div class="position-fixed top-0 start-50 translate-middle-x p-2" style="z-index: 5">
+        <div class="toast align-items-center text-white bg-primary border-0 hide mySuccess" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2000">
+            <div class="d-flex">
+                <div class="toast-body">成功</div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="toast align-items-center text-white bg-danger border-0 hide myFailed" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2000">
+            <div class="d-flex">
+                <div id="failed-message" class="toast-body"></div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+    <div class="mx-4">
+        <div class="my-3 py-3 border border-secondary rounded">
+          <div class="d-flex justify-content-center align-items-center gap-3">
+              <!-- <img src="logo48.jpg" /> -->
+              <div class="fs-1">Image Downloader X</div>
+          </div>
+          <div class="d-flex justify-content-center align-items-center gap-3">
+              <small id="version"></small>
+          </div>
+        </div>
+        <div class="my-3">
+            <div class="text-left">
+                <label for="folder-name">■ 保存するフォルダ名</label>
+            </div>
+            <div class="mt-1">
+                <input id="folder-name" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="my-3 d-flex justify-content-end">
+            <button id="save-button" type="submit" class="btn btn-primary">設定</button>
+        </div>
+    </div>
+</body>
+</html>
